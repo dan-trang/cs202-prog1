@@ -10,9 +10,9 @@ of Location objects. Useful functions include updating
 new location information, making a deep copy from a
 passed in source location object, comparing two locations,
 and displaying all location information for readibility.
-To be used by Product/Order/Distribution class.
-
 ************************************************/
+#ifndef LOCATION_H
+#define LOCATION_H
 #include <iostream>
 #include <cstring>
 
@@ -30,7 +30,7 @@ public:
 
 	void copy(const location& src_location); 	//takes in object of type location and makes deep copy
 	bool compare(const location& src_location) const; 	//return true if src location and curr location are same
-	void display() const; 	//displays full location
+	void display() const; 	//displays location details
 
 private:
 	char* _location_name;
@@ -38,3 +38,4 @@ private:
 	char* _state;
 	int _zip;
 };
+#endif
